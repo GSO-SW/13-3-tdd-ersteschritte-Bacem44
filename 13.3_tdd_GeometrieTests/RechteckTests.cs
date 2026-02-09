@@ -75,8 +75,8 @@ namespace _13._3_tdd_GeometrieTests // Namenskonvention: <zuTestendesProjekt>Tes
             // Act
             r.Hoehe = -1;
         }
-        
-        [TestMethod] 
+
+        [TestMethod]
         public void Umfang_WirdBerechnet()
         {
             // Arrange
@@ -90,7 +90,7 @@ namespace _13._3_tdd_GeometrieTests // Namenskonvention: <zuTestendesProjekt>Tes
             // Assert
             Assert.AreEqual(60, ergebnis);
         }
-       
+
         [TestMethod]
         public void Flaeche_WirdBerechnet()
         {
@@ -105,7 +105,7 @@ namespace _13._3_tdd_GeometrieTests // Namenskonvention: <zuTestendesProjekt>Tes
             // Assert
             Assert.AreEqual(200, ergebnis);
         }
-        
+
         [TestMethod]
         public void Rechteck_KannMitStartwertenErsteltWerden()
         {
@@ -115,10 +115,34 @@ namespace _13._3_tdd_GeometrieTests // Namenskonvention: <zuTestendesProjekt>Tes
 
             // Act
             Rechteck r = new Rechteck(breite, hoehe);
-            
+
             // Assert
             Assert.AreEqual(breite, r.Breite);
             Assert.AreEqual(hoehe, r.Hoehe);
+
         }
+
+        [TestMethod]
+        public void Rechteck_KannInGroeasseVerglichenWerden()
+        {
+            //Arrange
+            Rechteck r1= new Rechteck();
+            r1.Breite = 10;   
+            r1.Hoehe = 20;
+
+            Rechteck r2 = new Rechteck();
+            r2.Breite = 20;
+            r2.Hoehe = 30;
+
+
+
+            //act
+            bool ergebnis = r1.istGroesserOderKleinerAls(r2);
+
+            //assert
+            Assert.IsTrue(ergebnis);
+        }
+           
+
     }
 }
