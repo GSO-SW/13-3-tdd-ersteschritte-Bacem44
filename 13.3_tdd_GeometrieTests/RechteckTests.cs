@@ -75,7 +75,7 @@ namespace _13._3_tdd_GeometrieTests // Namenskonvention: <zuTestendesProjekt>Tes
             // Act
             r.Hoehe = -1;
         }
-
+        
         [TestMethod] 
         public void Umfang_WirdBerechnet()
         {
@@ -90,7 +90,7 @@ namespace _13._3_tdd_GeometrieTests // Namenskonvention: <zuTestendesProjekt>Tes
             // Assert
             Assert.AreEqual(60, ergebnis);
         }
-
+       
         [TestMethod]
         public void Flaeche_WirdBerechnet()
         {
@@ -105,7 +105,7 @@ namespace _13._3_tdd_GeometrieTests // Namenskonvention: <zuTestendesProjekt>Tes
             // Assert
             Assert.AreEqual(200, ergebnis);
         }
-
+        
         [TestMethod]
         public void Rechteck_KannMitStartwertenErsteltWerden()
         {

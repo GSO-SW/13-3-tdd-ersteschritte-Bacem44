@@ -15,12 +15,26 @@ namespace _13._3_tdd_Geometrie
 
         public int Breite { 
             get { return breite; } 
-            set { breite = value; }
+            set
+            {
+                if (value  < 0)
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
+                else { breite = value; }
+            }
             
         }
         public int Hoehe { 
             get { return hoehe; } 
-            set { hoehe = value; }
+            set {
+
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
+                else { hoehe = value; }
+            }
         }
 
         public void Skalieren(double faktor)
@@ -32,5 +46,33 @@ namespace _13._3_tdd_Geometrie
             breite = Convert.ToInt32(breite * faktor);
             hoehe = Convert.ToInt32(hoehe * faktor);
         }
+
+        public int Umfang()
+        {
+            return 2 * breite + 2 * hoehe;
+
+        }
+        public int Flaeche()
+        {
+            return (breite*hoehe);
+
+        }
+
+        public Rechteck()
+        {
+
+        }
+
+
+
+        public Rechteck(int breite ,int hoehe )
+        {
+           Hoehe = hoehe;
+           Breite = breite;
+            
+        }
+
+
+       
     }
 }
